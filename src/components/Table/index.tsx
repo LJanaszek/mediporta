@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 export default function TableSort() {
     const [key, setKey] = useState(0)
-  
+
     let photos = [Object];
     // useEffect(() => {
     //   fetch('https://api.stackexchange.com/2.3/tags?order=desc&sort=popular&site=stackoverflow')
@@ -14,15 +14,15 @@ export default function TableSort() {
     //       sessionStorage.setItem("data", JSON.stringify(data.items))
     //     });
     // }, []);
-  
+
     photos = (JSON.parse(sessionStorage.getItem("data")!))
     console.log(photos, "-------------")
-    const [shownRows, setShownRows]=useState(photos.length)
+    const [shownRows, setShownRows] = useState(30)
     return (
         <div>
             <label htmlFor="">
                 how many rows would you like to see?
-                <input type="number" max={photos.length} onChange={(e) => {
+                <input type="number" onChange={(e) => {
                     setShownRows(parseInt(e.currentTarget.value))
                 }} />
             </label>
