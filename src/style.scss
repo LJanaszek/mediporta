@@ -1,0 +1,57 @@
+@import './vars.scss';
+
+*{
+
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+    h1, h2, h3, p{
+        all: unset;
+    }
+    header{
+        padding: 1em;
+        margin-bottom: 2em;
+        h1{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 2em;
+        color: var(--color2);
+    }
+    }
+    .App{
+        margin: 0 auto;
+        label{
+            margin-bottom: 2em;
+            display: inline-grid;
+        }
+    }
+    table{
+        height: auto;
+        
+        tbody{
+            
+        }
+        button{
+            background-color: unset !important;
+            border: none;
+            
+        }
+        thead{
+            th{
+                vertical-align: middle;
+            }
+            
+        }
+        tr{
+            :nth-of-type(odd){
+                background-color: --color2;
+            }
+            td{
+                // border: 1px solid black;
+            }
+        }
+    }
+    
+}
