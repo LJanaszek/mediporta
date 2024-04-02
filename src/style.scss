@@ -1,57 +1,75 @@
-@import './vars.scss';
+@import "./vars.scss";
 
-*{
-
+* {
+  font-family: "Ubuntu";
 }
-body{
-    width: 80%;
+body {
+  width: 80%;
+  margin: 0 auto !important;
+  h1,
+  h2,
+  h3,
+  p {
+    all: unset;
+  }
+  header {
+    padding: 1em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid var(--color2);
+    h1 {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 2em;
+      color: var(--color2);
+    }
+  }
+  .App {
     margin: 0 auto;
-    h1, h2, h3, p{
-        all: unset;
+    margin-bottom: 3em;
+    height: 80%;
+
+    label {
+      margin-bottom: 1em;
+      display: inline-grid;
     }
-    header{
-        padding: 1em;
-        margin-bottom: 2em;
-        h1{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        font-size: 2em;
-        color: var(--color2);
+    input{
+        margin-bottom: 1em;
     }
+  }
+  table {
+    height: auto;
+    margin-bottom: 2em;
+    tbody {
     }
-    .App{
-        margin: 0 auto;
-        label{
-            margin-bottom: 2em;
-            display: inline-grid;
-        }
+    button {
+      background-color: unset !important;
+      border: none;
     }
-    table{
-        height: auto;
+    thead {
+      th {
+        vertical-align: middle;
+      }
+      tr {
         
-        tbody{
-            
-        }
-        button{
-            background-color: unset !important;
-            border: none;
-            
-        }
-        thead{
-            th{
-                vertical-align: middle;
-            }
-            
-        }
-        tr{
-            :nth-of-type(odd){
-                background-color: --color2;
-            }
-            td{
-                // border: 1px solid black;
-            }
-        }
+          :first-child {
+            border-top-left-radius: 1em;
+          }
+          :last-child {
+            border-top-right-radius: 1em;
+          }
+          :focus{
+            color: var(--color2);
+          }
+        
+      }
     }
-    
+  }
+  footer{
+    width: 80%;
+    height: 2em;
+    position: relative;
+    bottom: 0em;
+    border-top: 1px solid var(--color2);
+}
 }

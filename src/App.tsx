@@ -1,11 +1,14 @@
+import React, { Suspense } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import TableSort from './components/Table';
+const TableSort = React.lazy(() => import('./components/Table'));
 function App() {
 
   return (
     <div className="App">
-      <TableSort />
+      <Suspense fallback={<div>please wait until table fully load</div>}>
+        <TableSort />
+      </Suspense>
     </div>
   );
 }
